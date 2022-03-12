@@ -1,0 +1,98 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+
+// GAMA COLORES:
+$my-primary-color: (
+  50 : #e3e3e3,
+  100 : #bab9b9,
+  200 : #8c8a8a,
+  300 : #5e5b5b,
+  400 : #3c3737,
+  500 : #191414,
+  600 : #161212,
+  700 : #120e0e,
+  800 : #0e0b0b,
+  900 : #080606,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+  )
+);
+
+$my-accent-color: (
+    50 : #e4f7ea,
+    100 : #bbeacc,
+    200 : #8edcaa,
+    300 : #61ce87,
+    400 : #3fc46e,
+    500 : #1db954,
+    600 : #1ab24d,
+    700 : #15aa43,
+    800 : #11a23a,
+    900 : #0a9329,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+    )
+);
+
+$my-warn-color: (
+    50 : #ffffff,
+    100 : #ffffff,
+    200 : #ffffff,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+    )
+);
+
+
+// PALETA DE COLORES
+$my-palette-primary: mat-palette($my-primary-color, 500);
+$my-palette-accent: mat-palette($my-accent-color, 500);
+$my-palette-warn: mat-palette($my-warn-color, 500);
+
+// TEMA PROPIO
+$my-theme: mat-dark-theme((
+ color: (
+   primary: $my-palette-primary,
+   accent: $my-palette-accent,
+   warn: $my-palette-warn
+ )
+));
+
+// APLICAR NUESTRO TEMA A ANGULAR
+@include angular-material-theme($my-theme);
