@@ -1,0 +1,19 @@
+.background-grey {
+  background-color:#212121;
+}
+
+.img-spotify {
+  margin-right: 5px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+ul li {
+  margin-inline: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
